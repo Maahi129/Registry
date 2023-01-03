@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Registry/static/css/main.ce3c73fc.css",
+    "main.js": "/Registry/static/js/main.cd7018d6.js",
+    "index.html": "/Registry/index.html",
+    "main.ce3c73fc.css.map": "/Registry/static/css/main.ce3c73fc.css.map",
+    "main.cd7018d6.js.map": "/Registry/static/js/main.cd7018d6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce3c73fc.css",
+    "static/js/main.cd7018d6.js"
+  ]
+}
