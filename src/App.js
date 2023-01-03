@@ -1,73 +1,46 @@
-import React from 'react'
-import './css/styles.css'
-
+import React from 'react';
+import './css/styles.css';
+import Option from './option';
+import Patient from './patient';
+import { selectUser } from './features/userSlice';
+import { useSelector } from 'react-redux';
+import Nwin from './components/nwin';
 
 
 const App = () => {
-  return (
+
+  const user = useSelector(selectUser);
+  return(
+
+  <div> {user && user.name && user.age && user.address && user.height && user.weight && user.name_of_hospital && user.state ? <Nwin /> :  
     <div>
     <div>
     <h1 class="header">Questionnarie For Open Fracture</h1>
     </div>
-
+  
     <div  className="full">
-    <div className='box'>
-       <div class="form-group">
-       <h1 class="header1"> Patient Details</h1>
-        <label for="subject"  class="name_field"><b>Name:</b><span style={{color:"red"}}>*</span></label>
-        <textarea id="subject"  name="subject" placeholder="Enter your Name.." required></textarea>
-      </div>
-    <br />
-      <div>  <label><b>Age/Sex :</b><span style={{color:"red"}}>*</span></label> <textarea id="subject" name="subject" placeholder="Enter your Age.." required></textarea> </div> <br />
-       <div> <label><b>Address :</b><span style={{color:"red"}}>*</span></label> <textarea id="subject" name="subject" placeholder="Enter your Address.." required></textarea></div><br />
-      <div>  <label><b>Occupation :</b></label> <textarea id="subject" class="occ" name="subject"required></textarea></div>
-      <div> <label><b>Height :</b><span style={{color:"red"}}>*</span></label> <input type = "number"  placeholder='in cm'></input>
-        <label  class="space"><b>Weight :</b><span style={{color:"red"}}>*</span></label> <input type = "number" placeholder='in cm'></input></div> <br />
-        <div><label><b>Name of Hospital:</b><span style={{color:"red"}}>*</span></label> <textarea class="spl"id="subject"  name="subject"required></textarea></div><br />
-        <div><label><b>State :</b><span style={{color:"red"}}>*</span></label> <textarea id="subject"class="spl1"  name="subject"required></textarea></div> <br />
-       <div> <label><b>Consultant Surgeon :</b><span style={{color:"red"}}>*</span></label> <textarea id="subject" class="spl2" name="subject"required></textarea></div>
-        </div> 
-        <div className='col'>
+       <Patient />
+        <div className='col' id='column'>
         <div>
-        <h2 style={{marginLeft:100}}>Time of injury :</h2>
-        <div className="container"> 
-        <div> 
-        <label for="cell"id="label">
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span">Morning </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span">Afternoon </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span">Evening </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span">Nigh-time </span>
-        </label>
-        </div>
-        </div>
-        </div>
+        
+        <Option 
+          head="Time of Injury"
+          one="Morning"
+          two="Afternoon"
+          three="Evening"
+          four="Night"
+        /></div>
 
         <div>
-        <h2 style={{marginLeft:100}}>Time of Arrival : <p style={{fontSize:20}}>To Hospital (after injury)</p></h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Less than 2hours </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span">2-6 hours </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span">6-24 hours </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Greater than 24hours </span>
-        </label>
-        </div>
-        </div>
-        </div>
+        <Option 
+          head="Time of Arrival"
+          one="Less than 2hours"
+          two="2-6 hours"
+          three="6-24 hours"
+          four="Greater than 24hours"
+        /></div>
 
+       
 
         <div>
         <h2 style={{marginLeft:100}}>Gap Till Primary Debridement:</h2>
@@ -87,26 +60,14 @@ const App = () => {
         </div>
         </div>
 
-
-        <div>
-        <h2 style={{marginLeft:100}}>Mode of Injury : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> High Energy  </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Low Energy </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span">Crush Injury </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Farmyard Injury </span>
-        </label>
-        </div>
-        </div>
-        </div>
+      <Option 
+        head="Mode of Injury :"
+        one="High Energy "
+        two="Low Energy"
+        three="Crush Injury"
+        four="Farmyard Injury"
+      />
+        
 
         <h1  style={{marginLeft:100}}>Type Of Injury</h1>
 
@@ -702,22 +663,21 @@ const App = () => {
         </div>
         </div>
 
-
-
-        <input type="submit" value="Submit" />
-
-
-
-
-
       </div>
+      
         </div>
-        </div>
-
-        
-        
  
-  )
+        
+        </div>     
+ 
+  
+
+  }
+
+</div>);
 }
 
+
 export default App;
+
+ 

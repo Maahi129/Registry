@@ -1,0 +1,32 @@
+.final_details{
+    width: 350px;
+    height: 500px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 40px 40px 40px 40px;
+    color: #282a3a;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.final_details > h3 {
+   margin-left: 15px;
+}
+
+.final_details > h1 {
+    margin-left: 65px;
+    color:#f64d82;
+ }
+
+ .final_details > h2 {
+    margin-left: 10px;
+    
+ }
+ 
+ button {
+    border:2px solid black;
+    background-color: #f64d82;
+    height: 50px;
+    width: 200px;
+    border-radius: 40px 40px 40px 40px;
+    margin-left: 55px;
+ }
