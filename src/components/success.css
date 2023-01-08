@@ -1,0 +1,17 @@
+.divison > h1 {
+color: rgb(33, 222, 255);
+margin-left: 40px;
+}
+
+.divison > p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(33, 222, 255);
+    margin-left: 40px;
+}
+
+
+.divison{
+    margin-left: 10;
+}
+

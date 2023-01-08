@@ -3,7 +3,7 @@ import s1 from './static/popin.mp3';
 import s2 from './static/popout.mp3';
 
 
-const Option = (props) => {
+const Option6 = (props) => {
 
   const [isChecked, setIsChecked] = useState(false);
 
@@ -49,6 +49,14 @@ const Option = (props) => {
         <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"    onClick={(checked)=> checked={isChecked} }
         onChange={() => setIsChecked(!isChecked)}/> <span id="span">{props.four} </span>
         </label>
+        <label>
+        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"    onClick={(checked)=> checked={isChecked} }
+        onChange={() => setIsChecked(!isChecked)}/> <span id="span">{props.five} </span>
+        </label>
+        <label>
+        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"    onClick={(checked)=> checked={isChecked} }
+        onChange={() => setIsChecked(!isChecked)}/> <span id="span">{props.six} </span>
+        </label>
         </div>
         </div>
     </div>
@@ -56,4 +64,4 @@ const Option = (props) => {
   )
 }
 
-export default Option
+export default Option6;

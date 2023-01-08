@@ -16,21 +16,26 @@ textarea{
 
 body{
     padding: 10px;
-    background-color: #282a3a;
+    background-color: #212529;
     color:white;
 }
 
 .full{
     display: flex;
     flex-direction: row;
-    
 }
 
 
 .header{
     text-align: center;
     margin-top: 15px;
-    color: #cd104d;
+    color: #fff;
+    font-size: 2.5rem;
+    background:linear-gradient(102.57deg,#dc0916,#f41fd6 100%,#f41fd6 0);
+    border-radius: 40px 40px 40px 40px;
+    width: 70%;
+    position: relative;
+    left: 230px;
     
 }
 
@@ -184,7 +189,7 @@ input[type=submit] {
 
   #l_btn{
     position: absolute;
-    top: 6150px;
+    top: 6270px;
     left: 900px;
     width: 200px;
   }

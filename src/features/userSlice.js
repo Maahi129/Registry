@@ -9,12 +9,16 @@ export const userSlice = createSlice({
     reducers:{
         submit: (state,action) => {
             state.user=action.payload;
+        },
+
+        login: (state,action) => {
+            state.action=action.payload;
         }
     }
     
 })
 
-export const {submit} = userSlice.actions;
+export const {submit, login} = userSlice.actions;
 
 export default userSlice.reducer;
 
