@@ -5,11 +5,17 @@ import Patient from './patient';
 import { selectUser } from './features/userSlice';
 import { useSelector } from 'react-redux';
 import Nwin from './components/nwin';
+import Option3 from './option3';
+import Option5 from './option5';
+import Option2 from './option2';
+import Option6 from './option6';
 
 
 const App = () => {
 
   const user = useSelector(selectUser);
+ 
+
   return(
 
   <div> {user && user.name && user.age && user.address && user.height && user.weight && user.name_of_hospital && user.state ? <Nwin /> :  
@@ -40,628 +46,340 @@ const App = () => {
           four="Greater than 24hours"
         /></div>
 
+
+
+       <div>
+        <Option3 
+          head="Gap Till Primary Debridement"
+          one="Less than 6 hours"
+          two="6-12 hours"
+          three="Greater than 12hours"
+        /></div>
+
        
+      
 
         <div>
-        <h2 style={{marginLeft:100}}>Gap Till Primary Debridement:</h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Less than 6hours </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span">6-12 hours </span>
-        </label>
-       
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Greater than 12hours </span>
-        </label>
-        </div>
-        </div>
-        </div>
-
       <Option 
-        head="Mode of Injury :"
+        head="Mode of Injury "
         one="High Energy "
         two="Low Energy"
         three="Crush Injury"
         four="Farmyard Injury"
       />
+      </div>
+
         
 
         <h1  style={{marginLeft:100}}>Type Of Injury</h1>
 
+
         <div>
-        <h2 style={{marginLeft:100}}>Wound Size : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Less than 1 cm  </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 1-10 cm </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span">Greater Than 10 cm </span>
-        </label>
-        </div>
-        </div>
+        <Option3 
+          head="Wound Size"
+          one="Less than 1 cm"
+          two="1-10 cm"
+          three="Greater Than 10 cm"
+        /></div>
+
+
+<div>
+        <Option3 
+          head="Crushing"
+          one="Simple"
+          two="Segmental"
+          three="Crush Injury"
+        /></div>
+
+<div>
+        <Option3 
+          head="Contamination"
+          one="No"
+          two="Mild"
+          three="Significant"
+        /></div>
+
+
+        <div>
+        <Option2
+        head="Nereve Injury"
+        one="No"
+        two="Yes"
+        />
         </div>
 
         <div>
-        <h2 style={{marginLeft:100}}>Crushing  : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Simple </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Segmental </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span">Crush Injury </span>
-        </label>
+        <Option2
+        head="Vascular Injury"
+        one="No"
+        two="Yes"
+        />
         </div>
-        </div>
-        </div>
-
-        <div>
-        <h2 style={{marginLeft:100}}>Contamination  : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> No </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Mild </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Significant </span>
-        </label>
-        </div>
-        </div>
-        </div>
-
-        <div>
-        <h2 style={{marginLeft:100}}>Nereve Injury  : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> No </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Yes </span>
-        </label>
-        </div>
-        </div>
-        </div>
-
-        <div>
-        <h2 style={{marginLeft:100}}>Vascular Injury  : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> No </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Yes </span>
-        </label>
-        </div>
-        </div>
-        </div>
-
 
         <h1 style={{marginLeft:100}}>Fracture Classification</h1>
 
         <div>
-        <h2 style={{marginLeft:100}}>Upper Limb : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Shoulder  </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Arm </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Elbow </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Forearm </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Wrist </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Hand </span>
-        </label>
-        </div>
-        </div>
-        </div>
+      <Option6 
+        head="Upper Limb "
+        one="Shoulder "
+        two="Arm"
+        three="Elbow"
+        four="Forearm"
+        five="Wrist"
+        six="Hand"
+      />
+      </div>
 
-
+      <div>
+      <Option6 
+        head="Lower Limb "
+        one="Pelvis "
+        two="Hip"
+        three="Thigh"
+        four="Knee"
+        five="Leg"
+        six="Foot"
+      />
+      </div>
+      
         <div>
-        <h2 style={{marginLeft:100}}>Lower Limb : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Pelvis  </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Hip </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Thigh </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Knee </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Leg </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Foot </span>
-        </label>
-        </div>
-        </div>
-        </div>
+      <Option5 
+        head="Gustilo Anderson Classification "
+        one="I "
+        two="II"
+        three="IIIA"
+        four="IIIB"
+        five="IIIC"
+      />
+      </div>
 
-
-        <div>
-        <h2 style={{marginLeft:100}}>Gustilo Anderson Classification : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> I  </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> II </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> IIIA </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> IIIB </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> IIIC </span>
-        </label>
-        </div>
-        </div>
-        </div>
 
         <h1 style={{marginLeft:100}}>Ganga Score :</h1>
 
-        <div>
-        <h2 style={{marginLeft:100}}>Skin and Fascia : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 1  </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 2 </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 3 </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 4 </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 5 </span>
-        </label>
-        </div>
-        </div>
-        </div>
-
 
         <div>
-        <h2 style={{marginLeft:100}}>Musc. & Nerve Unit : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 1  </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 2 </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 3 </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 4 </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 5 </span>
-        </label>
-        </div>
-        </div>
-        </div>
+      <Option5 
+        head="Skin and Fascia "
+        one="1 "
+        two="2"
+        three="3"
+        four="4"
+        five="5"
+      />
+      </div>
+
+      <div>
+      <Option5 
+        head="Musc. & Nerve Unit "
+        one="1 "
+        two="2"
+        three="3"
+        four="4"
+        five="5"
+      />
+      </div>
+
+      <div>
+      <Option5 
+        head="Skeletal Structure "
+        one="1 "
+        two="2"
+        three="3"
+        four="4"
+        five="5"
+      />
+      </div>
+
+       <div>
+        <Option 
+        head="Co-Morbidity Score  "
+        one="0 "
+        two="2-4"
+        three="4-8"
+        four="8-14"
+      />
+      </div>
 
 
-
-        <div>
-        <h2 style={{marginLeft:100}}>Skeletal Structure : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 1  </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 2 </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 3 </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 4 </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 5 </span>
-        </label>
-        </div>
-        </div>
-        </div>
-
-
-        <div>
-        <h2 style={{marginLeft:100}}>Co-Morbidity Score : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 0  </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 2-4 </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 4-8 </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 8-14 </span>
-        </label>
-        </div>
-        </div>
-        </div>
-
-
-        <div>
-        <h2 style={{marginLeft:100}}>Skeletal Trauma : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Ipsilateral Same Limb  </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Ipsilateral Other Limb </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Other </span>
-        </label>
-        <textarea id="subject" name="subject" placeholder="Mention if other" style={{bottomBorder:10,position:"relative",top:40,right:320, backgroundColor:"transparent",color:"white"}}></textarea>
+      <div>
+        <Option3 
+          head="Skeletal Trauma"
+          one="Ipsilateral Same Limb"
+          two="Ipsilateral Other Limb"
+          three="Other"
+        /></div>
+        <textarea id="subject" name="subject" placeholder="Mention if other" style={{bottomBorder:10,position:"relative",left:100, backgroundColor:"transparent",color:"white"}}></textarea>
        
-        </div>
-        </div>
-        </div>
        <br></br>
        <br></br>
 
-        <div>
-        <h2 style={{marginLeft:100}}>Associated Injury : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Head Injury  </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Chest Injury</span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Abd Injury</span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Hypo Tension</span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Other </span>
-        </label>
-        <textarea id="subject" name="subject" placeholder="Mention if other" style={{bottomBorder:10,position:"relative",top:40,right:320, backgroundColor:"transparent",color:"white"}}></textarea>
-       
-        </div>
-        </div>
-        </div>
+
+       <div>
+      <Option5 
+        head="Associated Injury "
+        one="Head Injury "
+        two=" Chest Injury"
+        three="Abd Injury"
+        four="Hypo Tension"
+        five="Other"
+      />
+      </div>
+        <textarea id="subject" name="subject" placeholder="Mention if other" style={{bottomBorder:10,position:"relative",left:100, backgroundColor:"transparent",color:"white"}}></textarea>
         <br></br>
        <br></br>
       
 
 
+       <div>
+      <Option6 
+        head="Associated Medical"
+        one="DM "
+        two="HTN"
+        three="Cardiac Illness"
+        four="Respiratory Illness"
+        five="Epilesy"
+        six="Other"
+      />
+      </div>
 
-        <div>
-        <h2 style={{marginLeft:100}}>Associated Medical : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> DM  </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> HTN</span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Cardiac Illness</span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Respiratory Illness</span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span">  Epilesy</span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Other </span>
-        </label>
-        <textarea id="subject" name="subject" placeholder="Mention if other" style={{bottomBorder:10,position:"relative",top:20,left:100, backgroundColor:"transparent",color:"white"}}></textarea>
-       
-        </div>
-        </div>
-        </div>
+        <textarea id="subject" name="subject" placeholder="Mention if other" style={{bottomBorder:10,position:"relative",top:0,left:100, backgroundColor:"transparent",color:"white"}}></textarea>
+ 
         <br></br>
        <br></br>
 
       <h1 style={{marginLeft:100, color:'#cd104'}}>Managment Profile</h1>
 
       <div>
-        <h2 style={{marginLeft:100}}>Pre Hospitalm Care  : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Given </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Not Given </span>
-        </label>
+        <Option2
+        head="Pre Hospitalm Care"
+        one="Given"
+        two=" Not Given"
+        />
         </div>
-        </div>
-        </div>
-
 
         <div>
-        <h2 style={{marginLeft:100}}>Initial Managment  : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Fluid Wash </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> POP </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> External Fixator </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Primary Sx </span>
-        </label>
-        </div>
-        </div>
-        </div>
-
-
-
-        <div>
-        <h2 style={{marginLeft:100}}>Total Blood Transfusion  : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Nil </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 1-2 packs </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Greater than 2 packs </span>
-        </label>
         
-        </div>
-        </div>
-        </div>
+        <Option 
+          head="Initial Managment"
+          one="Fluid Wash"
+          two="POP"
+          three=" External Fixator"
+          four="Primary Sx"
+        /></div>
 
 
-        <div>
-        <h2 style={{marginLeft:100}}>Antibiotics  : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> None </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Single Antibiotic </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Double Antibiotic </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Triple Antibiotic </span>
-        </label>
-        </div>
-        </div>
-        </div>
+<div>
+        <Option3 
+          head="Total Blood Transfusion "
+          one="Nil"
+          two="1-2 packs"
+          three="Greater than 2 packs"
+        /></div>
 
-        <div>
-        <h2 style={{marginLeft:100}}>Surgical  Debridement: </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Conservative </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Wash </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Radical </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Other </span>
-        </label>
-        <textarea id="subject" name="subject" placeholder="Mention if other" style={{bottomBorder:10,position:"relative",top:20,left:530, backgroundColor:"transparent",color:"white"}}></textarea>
-       
-        </div>
-        </div>
-        </div>
 
-        <div>
-        <h2 style={{marginLeft:100}}>Duration Of Surgery  : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Less Than 1 hour </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 1-2 hrs </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Greater Than 2 hours </span>
-        </label>
+       <div>
         
-        </div>
-        </div>
-        </div>
+        <Option 
+          head="Antibiotics"
+          one="None"
+          two=" Single Antibiotic"
+          three=" Double Antibiotic "
+          four="Triple Antibiotic"
+        /></div>
 
-
-        <div>
-        <h2 style={{marginLeft:100}}>Blood Loss  : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Less Than 100 ml </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> 100-200 ml </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Greater Than 200 ml </span>
-        </label>
         
-        </div>
-        </div>
-        </div>
+<div>
+        
+        <Option 
+          head="Surgical  Debridement"
+          one="Conservative"
+          two=" Wash"
+          three=" Radical "
+          four="Other"
+        /></div>
+
+        <textarea id="subject" name="subject" placeholder="Mention if other" style={{bottomBorder:10,position:"relative",top:0,left:530, backgroundColor:"transparent",color:"white"}}></textarea>
 
 
         <div>
-        <h2 style={{marginLeft:100}}>Implant Used  : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> None </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span">EX. Fix </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Plating </span>
-        </label>
+        <Option3 
+          head="Duration Of Surgery  "
+          one="Less Than 1 hour"
+          two="1-2 hrs"
+          three="Greater than 2 hours"
+        /></div>
 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Nailing </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Other </span>
-        </label>
+<div>
+        <Option3 
+          head="Blood Loss  "
+          one=" Less Than 100 ml "
+          two="100-200 ml"
+          three="Greater Than 200 ml"
+        /></div>
+
+
+<div>
+      <Option5 
+        head="Implant Used"
+        one="None "
+        two="EX. Fix"
+        three="Plating"
+        four="Nailing"
+        five="Other"
+      />
+      </div>
         <textarea id="subject" name="subject" placeholder="Mention if other" style={{bottomBorder:10,position:"relative",left:100, backgroundColor:"transparent",color:"white"}}></textarea>
-       
-        
-        </div>
-        </div>
-        </div>
 
-
+      
         <div>
-        <h2 style={{marginLeft:100}}>Soft Tissue Procedure : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Yes </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> No </span>
-        </label>
-        
-        </div>
-        </div>
+        <Option2
+        head="Soft Tissue Procedure "
+        one="Yes"
+        two=" No"
+        />
         </div>
 
         <div>
-        <h2 style={{marginLeft:100}}>Intra-Op Complication: </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Vascular Injury </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Nerve Injury </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Tendon </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Bone Loss </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Other </span>
-        </label>
+      <Option5 
+        head="Intra-Op Complication"
+        one="Vascular Injury "
+        two="Nerve Injury"
+        three="Tendon"
+        four="Bone Loss"
+        five="Other"
+      />
+      </div>
+
         <textarea id="subject" name="subject" placeholder="Mention if other" style={{bottomBorder:10,position:"relative",left:100, backgroundColor:"transparent",color:"white"}}></textarea>
-       
-        </div>
-        </div>
-        </div>
-
+ 
 
         <div>
-        <h2 style={{marginLeft:100}}>Local Post-Op Complication  : </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> None </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span">Mild Infection </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Severe Infection </span>
-        </label>
-        
-        </div>
-        </div>
-        </div>
+        <Option3 
+          head="Local Post-Op Complication  "
+          one=" None"
+          two="Mild Infection"
+          three="Severe Infection"
+        /></div>
 
 
-        <div>
-        <h2 style={{marginLeft:100}}>Post-Op Complication: </h2>
-        <div className="container"> 
-        <div> 
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> None</span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> ARDS </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Pul. Embolism </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> ARF </span>
-        </label>
-        <label>
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Vascular Injury </span>
-        </label>
-        <label>
-        
+<div>
+      <Option6 
+        head="Post-Op Complication"
+        one="None "
+        two="ARDS"
+        three="Pul. Embolism"
+        four="ARF"
+        five=" Vascular Injury"
+        six="Other"
+      />
+      </div>
 
-        <input type="checkbox" name="" id="cell"  data-on="Yes" data-off="No"/> <span id="span"> Other </span>
-        </label>
+
+
+
+
+
         <textarea id="subject" name="subject" placeholder="Mention if other" style={{bottomBorder:10,position:"relative",left:100, backgroundColor:"transparent",color:"white"}}></textarea>
-       
-        </div>
-        </div>
-        </div>
 
       </div>
       

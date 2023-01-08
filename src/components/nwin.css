@@ -30,3 +30,32 @@
     border-radius: 40px 40px 40px 40px;
     margin-left: 55px;
  }
+
+
+ input[type=submit] {
+      
+   padding: 12px 20px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 18px;
+   margin: 4px 2px;
+   cursor: pointer;
+   transition-duration:0.4s;
+   border: none;
+   border-radius: 12px;
+   background-color: rgb(127, 193, 255);
+   color: black;
+   border:2px solid #ecf2ed;
+   position: relative;
+   left: 60px;
+ }
+ 
+ input[type=submit]:hover {
+   background-color: #1ecd21;
+   color: white;
+ }
+
+ #l_btn1{
+   width: 200px;
+ }

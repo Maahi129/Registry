@@ -19,18 +19,14 @@ const Patient = () => {
     const [state,setState] = useState("");
     const [consultant_surgeon,setSurgeon] = useState("");
     
-    
-    
-
-
-   
+  
 
     const dispatch = useDispatch();
 
     const handleClick = (e) => {
       e.preventDefault();
 
-     
+
 
       dispatch(submit({
         name:name,
@@ -43,16 +39,40 @@ const Patient = () => {
         state:state,
         consultant_surgeon:consultant_surgeon,
       })); 
- 
+      
+      // fetch("http://localhost:5000/registry",{
+      //   method:"POST",
+      //   crossDomain:true,
+      //   headers:{
+      //     "Content-Type":"application/json",
+      //     Accept:"application/json",
+      //     "Access-Control-Allow-Origin":"*",
+      //   },
+      //   body:JSON.stringify({
+      //     name:name,
+      //     age:age,
+      //     address:address,
+      //     height:height,
+      //     weight:weight,
+      //     state:state,
+      //     name_of_hospital:name_of_hospital
+      //   }),
+      // }).then((res)=>res.json())
+      //   .then((data) => {
+      //     console.log(data, "patientRegister");
+      //   })
+     
      }
 
      function handle() {
         if(name && age && address && height && weight && name_of_hospital && state){
             console.log("Success")
+          
         }
         else{
             error = true;
         }
+        
      }
 
      
