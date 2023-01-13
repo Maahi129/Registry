@@ -1,12 +1,15 @@
 import React from 'react'
 import { useState } from 'react';
-import {submit} from './features/userSlice';
+import {  submit} from './features/userSlice';
 import { useDispatch } from 'react-redux';
+
 
 
 const Patient = () => {
 
     var error = false;
+
+    
 
 
     const [name,setName] = useState("");
@@ -19,7 +22,7 @@ const Patient = () => {
     const [state,setState] = useState("");
     const [consultant_surgeon,setSurgeon] = useState("");
     
-  
+    
 
     const dispatch = useDispatch();
 
@@ -38,7 +41,10 @@ const Patient = () => {
         name_of_hospital:name_of_hospital,
         state:state,
         consultant_surgeon:consultant_surgeon,
+       
       })); 
+
+      
       
       // fetch("http://localhost:5000/registry",{
       //   method:"POST",
@@ -65,7 +71,7 @@ const Patient = () => {
      }
 
      function handle() {
-        if(name && age && address && height && weight && name_of_hospital && state){
+        if(age && address && height && weight && name_of_hospital && state && (name.length>=5)){
             console.log("Success")
           
         }
@@ -85,9 +91,10 @@ const Patient = () => {
           <div class="form-group">
        <h1 class="header1"> Patient Details</h1>
         <label for="subject"  class="name_field"><b>Name:</b><span style={{color:"red"}}>*</span></label>
-        <textarea id="subject" value={name} onChange={(e) => {setName(e.target.value)}}  placeholder="Enter your Name.." required></textarea>
+        <textarea minLength={5} id="subject" value={name} onChange={(e) => {setName(e.target.value)}}  placeholder="Enter your Name.." required></textarea>
       </div>
-      {error?<label id="gap"><span style={{color:"red",marginLeft:80}}>This field is required</span></label>:""}
+      {error?<label id="gap"><span style={{color:"red",marginLeft:80}}>at Least 5 characters</span></label>:""}
+      
     <br />
       <div>  <label><b>Age/Sex :</b><span style={{color:"red"}}>*</span></label> <textarea value={age} onChange={(e) => setAge(e.target.value)}id="subject" name="subject" placeholder="Enter your Age.." required></textarea> </div>
       {error?<label id="gap"><span style={{color:"red",marginLeft:80}}>This field is required</span></label>:""} <br />
@@ -103,6 +110,7 @@ const Patient = () => {
        <div> <label><b>Consultant Surgeon :</b></label> <textarea value={consultant_surgeon} onChange={(e) => setSurgeon(e.target.value)} id="subject" class="spl2" name="subject"required></textarea></div>
         </div> 
         <br />
+       
   
         </form> 
         

@@ -1,86 +1,28 @@
-import React, { useState } from 'react'
-import  {   selectUser } from '../features/userSlice';
-import { useDispatch, useSelector } from 'react-redux';
-import './nwin.css'
-import Success from './success';
-// import Card from './card';
+import React from 'react'
+import { useSelector } from 'react-redux';
+import { selectUser } from '../features/userSlice';
 import './card.css';
 import img1 from '../images/doctor.jpg'
-import img2 from '../images/sudheer.jpg';
-import { login } from '../features/userSlice';
+import img2 from '../images/circle.png'
+import { useDispatch } from 'react-redux';
+import { selectUser } from '../features/userSlice';
 
 
-
-
-
-
-
-const Nwin = () => {
-
-
-    
-
-
-
-
-
-
+const Card = () => {
 
     const user = useSelector(selectUser);
-
-   
-
-
-    const [file, setFile] = useState(img2);
-
-    const handleChange = (e) => {
-      console.log(e.target.file);
-      setFile(URL.createObjectURL(e.target.files[0]));
-    }
-    
-
     const [error, setError] = useState(false);
 
     const dispatch = useDispatch();
 
     
 
-    const handleClick = (e) => {
-      e.preventDefault();
-
-      dispatch(login({
-        error,
-       
-    }))
-      
-    }
-
-    // const handle = (e) => {
-    //   dispatch(submit({
-    //     name : user.name,
-    //     }));
-    
-    // }
-    
-
- 
-   
-
-      return ( 
-        <div>
-       
-        <form onSubmit={(e) => handleClick(e)}>
-          {error? <Success /> :
-          <div id='fulldivcard'>
+  return (
+    <div id='fulldivcard'>
       <div id='card-img'>
       <div class="img-card">
         <img id='mg-card' src={img1} alt=''></img>
-        <label class="label">
-        <input type="file" id="filenone" accept='image/jpg, image/jpeg' onChange={(e) => handleChange(e)}  />
-        <span ><img id='spancard' alt='' src={file}></img></span>
-        </label>
-       
-        
+        <span ><img id='spancard' alt='' src={img2}></img></span>
         </div>
       </div>
       <hr class="center-ball" />
@@ -125,23 +67,10 @@ const Nwin = () => {
       setError(true)
      }}>Submit</button>
 </div>
-{/* <button onClick={(e) => handle(e)}>Edit</button> */}
          </div>
-
-
-
-         
-          }
-          </form>
-
-         
-        
-        </div>
-       
-         
-         ); 
      
-    
+ 
+  )
 }
 
-export default Nwin;
+export default Card

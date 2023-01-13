@@ -1,0 +1,111 @@
+#fulldivcard{
+    height: 690px;
+    background-color: #005e7c;
+    opacity: 0.75;
+    width: 1200px;
+    border-radius: 40px 40px 40px 40px;
+    position: relative;
+    left: 130px;
+}
+
+#img-card{
+    border-radius: 40px 40px 40px 40px;
+    
+}
+
+#mg-card{
+    border-radius: 40px 40px 40px 40px;
+}
+
+#spancard{
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+    /* background-color: red; */
+    position: absolute;
+    right: 170px;
+    top: 180px;   
+}
+
+
+/* .img-card{
+   width: 400px;
+   height: 200px;
+   border-radius: 40px 40px 40px 40px;
+   padding-bottom: 10px;
+} */
+
+#content-card{
+  
+    color: rgb(255, 255, 255);
+    position: relative;
+    margin-left: 20px;
+    display: flex;
+    font-size: 1.2rem;
+    padding-right: 10px;
+} 
+
+.condiv2{
+    position: relative;
+    left: 250px;
+    top: 60px;
+}
+
+.cardbtn{
+    position: absolute;
+    top: 270px;
+    left: 430px;
+    cursor: pointer;
+    background-color: #00243b;
+    color: #fff;
+}
+
+.cardbtn:hover{
+    background-color: rgb(176, 91, 255);
+    color:#fff;
+}
+
+
+.condiv1{
+    width: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+hr{
+  
+    border: 0;
+    height: 1px;
+    width: 20%;
+    position: relative;
+    margin: 30px auto;
+    
+}  
+
+    hr.center-ball{
+      background: aqua;
+    }
+      
+      hr:before{
+        content: "";
+        width: 6px;
+        height: 6px;
+        background: aqua;
+        display: inline-block;
+        border: 2px solid aqua;
+        border-radius:50%;
+        position: absolute;
+        top: -4px;
+        left: 50%;
+        margin: 0 0 0 -3px;
+      
+    }
