@@ -1,0 +1,161 @@
+/* #t2{
+    background-color: rgb(192, 164, 164);
+     width: 200px;
+    position: relative; 
+    margin-left: 2px; 
+    border-collapse:collapse;
+   
+ }  */
+
+
+
+/* Injury details */
+
+#form-t2{
+    width:200px;
+    height: 120px;
+    font-size: 0.3rem;
+    font-weight: normal;
+    margin-left: 4px;
+    border: .5px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-th{
+    font-weight: normal;
+    font-size: 0.33rem;
+}
+
+/* th{
+    font-weight: normal;
+    font-size: 0.2rem;
+    
+} */
+
+#form-label{
+    font-size: 0.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#form-check {
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+}
+
+
+#form-t3{
+    width:200px;
+    height: 60px;
+    font-size: 0.3rem;
+    font-weight: normal;
+    margin-left: 0px;
+    border: .5px solid black;
+    margin-top: 19px;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-check1 {
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+}
+
+
+.form-label1{
+    margin-left: 10;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+
+
+#t4{
+    width:200px;
+    height: 10px;
+    font-size: 0.3rem;
+    font-weight: normal;
+    margin-left: 0px;
+    border: .5px solid black;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 5px;
+    
+}
+
+.form-pos {
+    position: relative;
+}
+
+
+.form-label2{
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    right: 20px;
+}
+
+
+#t5 {
+    width:200px;
+    margin-top: 5px;
+    font-size: 0.3rem;
+    font-weight: normal;
+    margin-left: 0px;
+    border: .5px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#t6{
+    width:200px;
+    height: 70px;
+    font-size: 0.3rem;
+    font-weight: normal;
+    margin-left: 0px;
+    border: .5px solid black;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.form-label3{
+    text-align: center;
+    justify-content: center;
+}
+
+
+/* #other {
+    font-size: 0.3rem;
+    font-weight: normal;
+} */
+
+
+#t7{
+    width:200px;
+    font-size: 0.3rem;
+    font-weight: normal;
+    margin-left: 0px;
+    border: .5px solid black;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+    top: 20px;
+}
+
+ #style-one{
+border: 0;
+height: 0;
+border-top: 1px solid rgba(0, 0, 0, 0.1);
+/* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+ }

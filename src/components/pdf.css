@@ -1,0 +1,118 @@
+#content{
+    opacity: 0.0000000000001;
+    
+}
+
+
+th, td, caption{
+	 /* border: .6px solid black;   */
+	/* padding: 15px; */
+    color: #000000;
+    font-weight: normal;
+    background-color: rgb(192, 164, 164);
+    opacity: 0.75;
+    font-size: 0.44rem;
+    
+}
+
+caption{
+    display: flex;
+    color:black;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+    /* margin-left: 6px; */
+    background-color: rgb(192, 164, 164);
+   
+}
+
+ tbody  {
+    background-color: rgb(192, 164, 164);
+    
+} 
+
+td{
+    padding: 4px;
+    display: inline-flex;
+    flex-direction: row; 
+    background-color: rgb(192, 164, 164);
+}
+
+#t1 {
+    border-collapse:collapse;
+    background-color: rgb(192, 164, 164);;
+  }
+
+.size-table{
+width: 200px;
+opacity: 0.75;
+position: relative;
+border: .5px solid black;
+margin-left: 4px;
+margin-top: 10px;
+background-color: rgb(192, 164, 164);
+margin-bottom: 15px;
+
+
+  }
+
+
+tr{
+   display: flex;
+   flex-direction: row;
+   margin-left: 4px;
+   background-color: rgb(192, 164, 164);
+} 
+
+.c1{
+    width: 87px;
+    background-color: rgb(192, 164, 164);
+    /* display: inline-block; */
+}
+
+#c2{
+    width: 87px;
+    background-color: rgb(192, 164, 164);
+}
+
+
+
+
+
+
+
+
+
+/* Injury details */
+
+/* .t2{
+    width:200px;
+    font-size: 0.3rem;
+    font-weight: normal;
+    margin-left: 4px;
+    border: .5px solid black;
+}
+
+
+
+th{
+    font-weight: normal;
+    font-size: 0.3rem;
+    
+}
+
+label{
+    font-size: 0.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#form-check {
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+}
+
+ */
